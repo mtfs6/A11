@@ -1,0 +1,256 @@
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-color: white;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 98%;
+    margin: 0 auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
+	max-width: 960px;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+/* the styles for the header */
+header {
+	padding: 1.5em 0 2em 0;
+	border-bottom: 3px solid #931420;
+		background-image: -moz-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -webkit-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -o-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+}
+header h2 {
+	font-size: 175%;
+	color: #800000;
+}
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+header img {
+	float: left;
+	padding: 0 30px;
+}
+
+article img,
+aside img {
+	max-width: 40%; /* Set the maximum width to 40% */
+	min-width: 150px; /* Set the minimum width to 150px */
+	width: auto; /* Ensures that images maintain their aspect ratio */
+}
+.shadow {
+	text-shadow: 2px 2px 2px #800000;
+}
+/* the styles for the section */
+section {
+	width: 60%;
+	float: right;
+	padding: 0 20px 20px 20px;
+}
+section h1 {
+	font-size: 150%;
+	padding: .5em 0 .25em 0;
+	margin: 0;
+}
+section h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: 0 0 .25em 1.25em;
+}
+section li {
+	padding-bottom: .35em;
+}
+
+/* the styles for the article */
+article {
+	padding: .5em 0;
+	border-top: 2px solid #800000;
+	border-bottom: 2px solid #800000;
+}
+article h2 {
+	padding-top: 0;
+}
+article h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+article img {
+	float: right;
+	margin: .5em 0 1em 1em;
+	border: 1px solid black;
+}
+
+/* the styles for the aside */
+aside {
+	width: 25%;
+	float: right;
+	padding: 0 0 20px 20px;
+}
+aside h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+aside img {
+	padding-bottom: 1em;
+}
+
+.current {
+	color: yellow;
+}
+
+.sub_menu {
+	display: none;
+	position: absolute;
+}
+
+.sub_menu li {
+	width: 100%;
+}
+
+#sub_menu_btn:hover + .sub_menu {
+	display: block;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+ul li {
+	float: left;
+}
+
+
+li {
+	width: 20%;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-color: #800000;
+
+}
+
+li a {
+	display: block;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+li a:link {
+	text-decoration: none;
+}
+li a:visited {
+	text-decoration: none;
+}
+li a:hover {
+	text-decoration: none;
+}
+li a:active {
+	text-decoration: none;
+}
+
+/* the styles for the footer */
+footer {
+	background-color: #931420;
+	clear: both;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
+
+
+@media screen and (max-width: 640px) {
+	aside h2 a {
+		font-size: 85%; /* Decrease font size of <a> element within h2 in aside to 85% */
+	}
+
+	section h1 {
+		font-size: 125%; /* Decrease font size of h1 in section to 125% */
+	}
+
+	section h2 {
+		font-size: 110%; /* Decrease font size of h2 in section to 110% */
+	}
+}
+
+/* Media query for viewport width 300px or less */
+@media screen and (max-width: 640px) {
+	/* Change the image in the header */
+	header img {
+		float: none; /* Remove float */
+		display: block; /* Center the image */
+		margin: 0 auto; /* Center the image */
+	}
+
+	/* Prevent floating and set padding for section and aside */
+	section,
+	aside {
+		float: none; /* Prevent floating */
+		padding: 0 5%; /* Set padding */
+		width: calc(50% - 10%); /* Set width */
+	}
+
+	/* Adjust padding for aside */
+	aside {
+		padding-right: 5%; /* Set right padding */
+	}
+
+	/* Adjust maximum width for images in articles */
+	article img {
+		max-width: 30%; /* Set maximum width to 30% */
+	}
+
+	/* Display speakers in two columns */
+	aside > div {
+		column-count: 2; /* Set column count to 2 */
+	}
+}
+
+/* Media query for viewport width more than the width noted or less */
+@media screen and (max-width: 600px) {
+	/* Font size adjustment */
+	body {
+		font-size: 90%; /* Decrease base font size to 90% */
+	}
+}
+
+/* Additional media query for viewport width more than the width noted or less */
+@media screen and (max-width: 960px) {
+	/* Padding adjustment for the footer */
+	footer {
+		padding: 0 20px; /* Add padding to prevent footer from getting too close to the edges */
+	}
+}
